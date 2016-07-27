@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="container">
+		<div class="messageBox" id="messageBox"></div>
+		<form class="messageForm" id="messageForm">
+			<input type="text" id="message" name="message">
+			<button id="sendMessage">Send</button>
+		</form>
+	</div>
+	<script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/backbone.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		$('body').height($(window).innerHeight());
+	</script>
+</body>
+</html>

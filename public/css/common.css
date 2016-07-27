@@ -1,0 +1,18 @@
+body {
+	position: relative;
+}
+.container {
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 50px;
+	position: relative;
+}
+.messageBox {
+	height: 100%;
+}
+.messageForm {
+	bottom: 0;
+	height: 50px;
+	position: absolute;
+	right: 0;
+}
