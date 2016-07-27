@@ -1,21 +1,21 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var router = require('./server/router');
+var controllers = require('./server/controllers');
+
+global.users = {};
 
 app.use(express.static('public'));
+app.use('/api', router);
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 });
 
-io.on('connection', function(socket) {
-	socket.on('chatMessage', function(msg){
-		io.emit('chatMessage', msg);
-	});
-});
+controllers.socketController(http);
 
 http.listen(3000, function(){
-  console.log('listening on *:3000');
+	console.log('listening on *:3000');
 });
 
