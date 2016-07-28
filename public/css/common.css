@@ -28,6 +28,9 @@ body {
 .messageBox > div:first-child {
 	margin-top: 0;
 }
+.messageBox .sender {
+	background: #80ff80;
+}
 .messageForm {
 	bottom: 0;
 	height: 50px;

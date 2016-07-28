@@ -11,8 +11,7 @@ module.exports = function(http) {
         });
         socket.on('chatMessage', function(msg){
             io.emit('chatMessage', {
-                id: global.users[socket.conn.id].id,
-                sender: global.users[socket.conn.id].name,
+                sender: global.users[socket.conn.id],
                 message: msg
             });
         });
